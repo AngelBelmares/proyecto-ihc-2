@@ -1,138 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Tienda de Ropa</title>
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Tienda de Ropa</title>
+	</head>
 
+	<body>
+		<header>
+			<div class="top-banner">
+				<a href="">
+					<img
+						src="https://static.vecteezy.com/system/resources/thumbnails/022/927/275/small/clothing-store-logo-design-inspiration-cloth-shop-logo-clothes-logo-illustration-vector.jpg"
+						alt=""
+						class="img-container"
+				/></a>
+			</div>
+			<div class="top-nav-bar">
+				<div class="clasificaciones">
+					<a href="">Hombres</a>
+					<a href="">Mujeres</a>
+					<a href="">Niños</a>
+					<a href="">Accesorios</a>
+				</div>
+				<div class="right-header">
+					<div class="search-bar">
+						<form action="">
+							<input type="text" placeholder="Search.." />
+							<button><i class="fa-solid fa-magnifying-glass"></i></button>
+						</form>
+					</div>
+					<div class="user-profile">
+						<a href=""><i class="fa-regular fa-user" style="color: #000000;"></i></a>
+					</div>
+				</div>
+			</div>
+		</header>
 
-<body>
-  <header>
-    <div class="top-banner">
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/022/927/275/small/clothing-store-logo-design-inspiration-cloth-shop-logo-clothes-logo-illustration-vector.jpg" alt="" class="img-container">
-    </div>
-    <div class="top-nav-bar">
-      <div class="clasificaciones">
-        <a href="">Hombres</a>
-        <a href="">Mujeres</a>
-        <a href="">Niños</a>
-        <a href="">Accesorios</a>
-      </div>
-      <div class="right-header">
-        <div class="search-bar">
-          <input type="text" placeholder="Search..">
-        </div>
-        <div class="user-profile">
-          <a href=""></a>
-        </div>
-      </div>
-    </div>
-  </header>
+		<div class="imagen-central">
+			<h2>Las Mejores Ofertas de Ropa</h2>
+		</div>
 
-  <div class="imagen-central">
-    <h2>Las Mejores Ofertas de Ropa</h2>
-  </div>
+		<div class="contenedor-articulos">
+			<% for (let i = 0; i < prendas.length; i++) { %>
+			<article
+				id="<%= prendas[i].id %>"
+				class="articulo"
+				onclick="mostrarPrenda('<%= prendas[i].id %>');"
+			>
+				<img src="<%= prendas[i].image%>" alt="" />
+				<div class="descripcion">
+					<h3><%= prendas[i].name %></h3>
+					<h4><%= prendas[i].price %> MXN</h4>
+				</div>
+			</article>
+			<% } %>
+		</div>
 
-  <div class="contenedor-articulos">
-    <article id="1" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa con estampado</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-    <article id="2" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-    <article id="2" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-    <article id="2" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-    <article id="2" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-    <article id="2" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-    <article id="2" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-    <article id="2" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-    <article id="2" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-    <article id="2" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-    <article id="2" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-    <article id="2" class="articulo" onclick="mostrarPrenda(id)">
-      <img src="https://w7.pngwing.com/pngs/831/1016/png-transparent-clothing-accessories-dress-outerwear-earring-moda-hat-bracelet-teal.png" alt="">
-        <div class="descripcion">
-          <h3>Camisa</h3>
-          <h4>20 MXN</h4>
-        </div>
-    </article>
-  </div>
+		
 
-  <div id='1' class="prueba" onclick="mostrarPrenda(id)">
-    
-  </div>
-
-  <script>
-    function mostrarPrenda(id) {
-      window.location.href = '/prenda?id=' + id
-    }
-  </script>
-  <footer>
-
-  </footer>
-</body>
+		<script>
+			function mostrarPrenda(id) {
+				window.location.href = "/prenda/" + id
+			}
+		</script>
+		<footer></footer>
+	</body>
 </html>

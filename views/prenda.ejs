@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
   <title>Tienda de Ropa</title>
 </head>
-
 
 <body>
   <header>
     <div class="top-banner">
+      <a href="../">
       <img src="https://static.vecteezy.com/system/resources/thumbnails/022/927/275/small/clothing-store-logo-design-inspiration-cloth-shop-logo-clothes-logo-illustration-vector.jpg" alt="" class="img-container">
-    </div>
+    </div></a>
     <div class="top-nav-bar">
       <div class="clasificaciones">
         <a href="">Hombres</a>
@@ -31,18 +31,17 @@
     </div>
   </header>
 
-
+  <% if (prenda) { %>
   <div class="contenedor-prenda">
+    
     <div class="imagen-prenda">
-      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT7Y_HZXuViOB5KtUMtySQoMvn8_0SVOgzIOzyROalbKuA30nrf" alt="" class="img-container">
+      <img src="<%= prenda.image %>" alt="" class="img-container">
     </div>
     <div class="info">
-      <h1>Nombre de la prenda</h1>
-      <strong>50.00 MXN</strong>
+      <h1><%= prenda.name %></h1>
+      <strong><%= prenda.price %> MXN</strong>
       <div class="descripcion">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis dolorum possimus error 
-          itaque in praesentium, provident laboriosam modi esse mollitia velit voluptates laborum veritatis 
-          minima ad earum odio ipsum eum!</p>
+        <p><%= prenda.description %></p>
       </div> 
       <div class="tallas">
         <button class="btn btn-primary"><b>S</b></button>
@@ -50,18 +49,14 @@
         <button class="btn btn-primary">L</button>
         <button class="btn btn-primary">XL</button>
       </div>
-      <p><b>cantidad disponible:</b> 50</p>
+      <p><b>cantidad disponible:</b> <%= prenda.stock %></p>
       <div class="carrito">
         <button class="btn btn-primary">Agregar al carrito</button>
       </div>
     </div>
+    
   </div>
-
-  <script>
-    function mostrarPrenda(id) {
-      window.location.href = '/prenda?id=' + id
-    }
-  </script>
+  <% } %>
   <footer>
 
   </footer>
