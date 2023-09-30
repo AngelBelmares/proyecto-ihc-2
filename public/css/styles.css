@@ -1,6 +1,6 @@
 body {
 	/* background-color: #fff; */
-	background-color: #000;
+	background-color: #fff;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 16px;
 	line-height: 1.6em;
@@ -149,8 +149,99 @@ header {
 	cursor: pointer;
 }
 
+.contenedor-prenda{
+	display: grid;
+	grid-template-columns: 1.3fr 1fr;
+	height: auto;
+	max-width: 100%;
+	border: red 1px solid;
+	padding: 1rem;
+  margin-left: 13vw;
+  margin-right: 13vw;
+	height: 100%;
+	overflow: hidden;
+}
+
+.contenedor-prenda > *{
+	border: red 1px solid;
+}
+
+.contenedor-prenda img{
+	width: 100%;
+	max-height: 100%;
+	aspect-ratio: 4/5;
+}
+
+.contenedor-prenda .info{
+	position: relative;
+	padding: 1rem;
+	padding-left: 2rem;
+}
+
+.contenedor-prenda h2{
+	font-size: 2rem;
+}
+
+.contenedor-prenda strong{
+	font-size: 1.5rem;
+	color: #fa6338;
+}
+
+.contenedor-prenda .descripcion{
+	background-color: #ddd;
+	padding: 0.7rem;
+	top: 1rem;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+	overflow: hidden;
+}
+
+.contenedor-prenda .tallas button{
+	margin-top: 1rem;
+	background-color: white;
+	color: black;
+	border: #000 2px solid;
+	font-weight: 900;
+	padding: 0.9rem;
+	border-radius: 10px;
+	margin-right: 0.5rem;
+	cursor: pointer;
+	aspect-ratio: 1/1;
+}
+
+.contenedor-prenda .tallas button:hover{
+	background-color: #000;
+	color: white;
+}	
+
+.contenedor-prenda .carrito{
+	/* make the buttom be in the bottom right inside .contenedor-prenda*/
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 1rem;
+} 
 
 
+.contenedor-prenda .carrito button {
+  margin-top: 1rem;
+	line-height: 1;
+	padding: 1rem 1rem;
+  font-size: 1.1rem;
+  background-color: white;
+  color: black;
+  border: black 2px solid;
+  font-weight: 900;
+  border-radius: 15px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.contenedor-prenda .carrito button:hover{
+	background-color: #000;
+	color: white;
+}
 
 
 

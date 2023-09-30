@@ -12,6 +12,9 @@ app.get('/', (req, res) => {
   res.render('index.ejs');
 });
 
+app.get('/prenda', (req, res) => {
+  res.render('prenda.ejs');
+});
 
 app.listen(PORT, () => {
   console.log(`Server on port http://localhost:${PORT}`);
