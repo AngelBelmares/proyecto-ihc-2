@@ -66,12 +66,10 @@ header {
 
 .right-header a{
 	height: 100%;
-	margin-left: 1rem;
-	margin-right: 1rem;
-}
-
-.right-header i{
-	height: 100%;
+	margin-right: .7rem;
+	margin-left: .7rem;
+	margin-top: .4rem;
+	margin-bottom: .4rem;
 }
 
 .search-bar{
@@ -99,6 +97,26 @@ header {
 
 .search-bar button:hover {
 	background: #ccc;
+}
+
+.options{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	float: right;
+	height: 100%;
+	align-items: center;
+}
+
+.user-options,
+.user-cart {
+  display: flex;
+  align-items: center;
+}
+
+.user-options:hover,
+.user-cart:hover {
+	background-color: #ddd;
 }
 
 .imagen-central {
