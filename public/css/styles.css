@@ -9,9 +9,9 @@ body {
 }
 
 header {
-  overflow: hidden;
   background-color: #f1f1f1;
 	max-height: auto;
+	overflow: hidden;
 }
 
 .top-banner{
@@ -40,6 +40,7 @@ header {
 	height: 2.5rem;
 	overflow: hidden;
 	align-items: center;
+	background-color: #a8b5e0;
 }
 
 .clasificaciones a {
@@ -305,5 +306,100 @@ header {
 	color: white;
 }
 
+.register-form{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	max-width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 5px 5px 15px gray;
+	padding: 1rem;
+	margin-top: 2rem;
+}
+
+.color{
+	position: absolute;
+	width: 100%;
+	height: 6rem;
+	bottom: 0;
+	background-color: #dbe9fc;
+	z-index: -1;
+}
+
+.register-form h1{
+	font-size: 2rem;
+}
+
+.register-form form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.form-control{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	float: left;
+	padding: 0.5rem;
+	overflow: hidden;
+	width: 80%;
+}
+
+.form-control label{
+	font-size: 1.2rem;
+	font-weight: 700
+}
+
+.form-control input{
+	padding: 0.5rem;
+	margin-top: 0.5rem;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.form-control p{
+	font-size: 0.8rem;
+	color: red;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.register-form a{
+	margin-bottom: 1rem;
+}
+
+.button-register{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+}
 
 
+.button-register button{
+	line-height: 0.5;
+	padding: 1rem 1rem;
+	font-size: 1rem;
+	background-color: #a8b5e0;
+	color: black;
+	border: none;
+	box-shadow: rgb(26, 5, 59) 1px 1px 1px;
+	font-weight: 500;
+	border-radius: 5px;
+	cursor: pointer;
+	overflow: hidden;	
+}
+
+.button-register:hover button{
+	background-color: #a8b5e0;
+}

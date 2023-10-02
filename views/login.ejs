@@ -11,7 +11,7 @@
 	<body>
 		<header>
 			<div class="top-banner">
-				<a href="">
+				<a href="../">
 					<img
 						src="https://static.vecteezy.com/system/resources/thumbnails/022/927/275/small/clothing-store-logo-design-inspiration-cloth-shop-logo-clothes-logo-illustration-vector.jpg"
 						alt=""
@@ -34,7 +34,7 @@
 					</div>
 					<div class="options">
 						<div class="user-options">
-							<a href="../login"><i class="fa-regular fa-user" style="color: #000000;"></i></a>
+							<a href="/login"><i class="fa-regular fa-user" style="color: #000000;"></i></a>
 						</div>
 						<div class="user-cart">
 							<a href=""><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
@@ -42,35 +42,37 @@
 					</div>
 				</div>
 			</div>
-		</header>
+		</header> 
+	
 
-		<div class="imagen-central">
-			<h2>Las Mejores Ofertas de Ropa</h2>
-		</div>
-
-		<div class="contenedor-articulos">
-			<% for (let i = 0; i < prendas.length; i++) { %>
-			<article
-				id="<%= prendas[i].id %>"
-				class="articulo"
-				onclick="mostrarPrenda('<%= prendas[i].id %>');"
-			>
-				<img src="<%= prendas[i].image%>" alt="" />
-				<div class="descripcion">
-					<h3><%= prendas[i].name %></h3>
-					<h4><%= prendas[i].price %> MXN</h4>
+		<div class="register-form">
+			<div class="color">
+				<span></span>
+			</div>
+			<h1>Login</h1>
+			<form action="/login" method="POST">
+				<div class="form-control">
+					<label for="name">Nombre</label>
+					<input type="text" name="name" id="name" placeholder="Nombre" required pattern="[A-Za-z]+" title="El nombre debe contener solo letras">
 				</div>
-			</article>
-			<% } %>
+				<div class="form-control">
+					<label for="email">Correo Electrónico</label>
+					<input type="email" name="email" id="email" placeholder="Correo Electrónico" required pattern=".+\.com$" />
+				</div>
+				<div class="form-control">
+					<label for="password">Contraseña</label>
+					<input type="password" name="password" id="password" placeholder="Contraseña" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+				</div>
+				<a href="../register">No tienes una cuenta? Registrate aqui</a>
+				<div class="button-register">
+					<button type="submit">Iniciar Sesion</button>
+				</div>
+			</form>
+			<div class="color">
+				<span></span>
+			</div>
 		</div>
 
-		
-
-		<script>
-			function mostrarPrenda(id) {
-				window.location.href = "/prenda/" + id
-			}
-		</script>
 		<footer></footer>
 	</body>
 </html>
