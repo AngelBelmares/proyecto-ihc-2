@@ -321,6 +321,34 @@ header {
 	margin-top: 2rem;
 }
 
+.register-form a{
+	margin-bottom: 1rem;
+}
+
+.register-form .error{
+	width: 100%;
+	background-color: #eed6d6;
+	padding: 0.5rem;
+	border-radius: 5px;
+	border: red 1px solid;
+	font: 1rem bolder;
+	color: rgba(221, 44, 44, 0.931);
+	width: 80%;
+	line-height: 0%;
+}
+
+.register-form .success{
+	width: 100%;
+	background-color: #b5e1ba;
+	padding: 0.5rem;
+	border-radius: 5px;
+	border: #37cd49 1px solid;
+	font: 1rem bolder;
+	color: #2fa83d;
+	width: 80%;
+	line-height: 0%;
+}
+
 .color{
 	position: absolute;
 	width: 100%;
@@ -364,16 +392,16 @@ header {
 	border: 1px solid #ccc;
 }
 
-.form-control p{
+.form-control span{
 	font-size: 0.8rem;
 	color: red;
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 }
 
-.register-form a{
-	margin-bottom: 1rem;
-}
+
+
+
 
 .button-register{
 	display: flex;

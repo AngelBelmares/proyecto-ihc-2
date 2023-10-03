@@ -2,10 +2,16 @@
 import express from "express"
 import { PrendaController } from "./controllers/prendas.js"
 import { UserController } from "./controllers/users.js"
-import bodyParser from "body-parser";
+import bodyParser from "body-parser"
+import session from "express-session";
 
 
 const app = express()
+app.use(session({
+  secret: "my-secret-key",
+  resave: false,
+  saveUninitialized: false
+}));
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -19,6 +25,7 @@ app.get("/", prendaController.getAll)
 app.get("/prenda/:id", prendaController.getById)
 
 app.get("/login", userController.loginPage)
+app.post("/login", userController.loginUser)
 app.get("/register", userController.registerPage)
 app.post("/register", userController.registerUser)
 
